@@ -1,0 +1,26 @@
+{
+  "name": "nbl-bookstore-application",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nahidhasib/NBL-Bookstore-Application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nahidhasib/NBL-Bookstore-Application/issues"
+  },
+  "homepage": "https://github.com/nahidhasib/NBL-Bookstore-Application#readme",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  }
+}

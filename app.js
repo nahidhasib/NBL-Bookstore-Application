@@ -6,10 +6,8 @@ const port = process.env.PORT || 8080;
 // Set EJS as the templating engine
 app.set('view engine', 'ejs');
 
-// Middleware to parse form data
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }))
 
-// Serve static files like CSS, JS
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
@@ -23,7 +21,6 @@ app.get('/', (req, res) => {
     res.render('index', { books: results });
   });
 });
-
 
 // Route to show the form to add a new book
 app.get('/add-book', (req, res) => {

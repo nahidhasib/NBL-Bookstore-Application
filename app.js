@@ -13,7 +13,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.status(200).send("Hello World!")
+  const query = 'SELECT * FROM books';
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error('Error fetching books:', err);
+      res.status(500).send('Error fetching books');
+      return;
+    }
+    res.render('index', { books: results });
+  });
+});
+
+
+// Route to show the form to add a new book
+app.get('/add-book', (req, res) => {
+  res.render('add-book');
 });
 
 // Initialise the books table in the RDS
